@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block extra_head %}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/menu.css'%}"/>
+{% endblock %}
+{% block content%}
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+.button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    margin-left: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.parallax {
+    /* The image used */
+    background-image: url("http://www.whatshelikes.in/wp-content/uploads/2014/06/indian-naan-roti-type.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+    text-align: center;
+    overflow: hidden;
+    color: #3C3C3C;   
+    margin-left:0px; 
+    margin-right: 0px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+      <!--Import Google Icon Font-->
+    <!--  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">!-->
+    <!--<link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet"> !-->
+      <!--Import materialize.css-->
+     <!-- <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>!-->
+      <title>Review Page</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css'%}">!-->
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <link rel="stylesheet" href="{% static 'css/review.css'%}">
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+     <!-- <ul class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+    <nav>
+      <ul>
+        <li><a href="default.asp">Home</a></li>
+        <li><a href="news.asp">About Us</a></li>
+        <li><a class="dropdown" href="contact.asp">Menu</a></li>
+        <li><a href="about.asp">Contact Us</a></li>
+        <li><a href="default.asp">Gallery</a></li>
+        <li><a href="default.asp">Reviews</a></li>
+      </ul> 
+    </nav>-->
+  <!--  <div class="container">
+      <a href="#home">HOME</a>
+      <a href="#news">ABOUT US</a>
+      <div class="dropdown">
+        <button class="dropbtn">MENU &#x25BE;</button>
+        <div class="dropdown-content">
+          <a href="#">Andhra Delicacies</a>
+          <a href="#">Mangalorean Cuisine</a>
+          <a href="#">Tandoor Delicacies</a>
+          <a href="#">Indian Breads</a>
+          <a href="#">North Indian</a>
+          <a href="#">Chineese</a>
+          <a href="#">Royal Indulgence</a>
+        </div>
+      </div>
+      <a href="#news">CONTACT US</a> 
+      <a href="#news">GALLERY</a>
+      <a href="#news">REVIEW</a>
+    </div>!-->
+    <div class="parallax">
+      <h2>REVIEW US</h2>
+ </div>
+	<h3 style="color:#cc0066; margin-left:10px">Kindly give your feedback</h3>
+ <form style="margin-left:10px;color:#993333">
+     Enter your name:<input type="text" name="name"/>
+</form><br>
+	<div id="TextEdit" class="editable">
+    <div id="requestInner" style="border:solid 1px black; 
+		margin-left:10px; margin-right:50px;height:200px;overflow:auto;cursor:text"
+
+            contenteditable="true">
+	<b>Please enter your feedback here:</b>
+	<br /><hr /> 
+      </div>
+</div><br>
+	
+<fieldset class="rating">
+    <legend style="margin-left:10px;color: #660033">Please rate:</legend>
+    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!"> 5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good"> 4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="good"> 3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad"> 2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="bad"> 1 star</label><br/>
+</fieldset><br><br><br><br><br>
+<button class="button">Submit</button>
+<br><br><br>
+
+<p style="margin-left:10px;color:green"><b>Comments:</b></p>
+<div class="main">
+	<div class="left">
+            <div class="top">
+              <p style="margin-left:10px;color:#800000"><b>Virat Kohli</b></p>
+   	      <p style="margin-left:10px;color:#FF5733"><b>Rating:</b>
+		<i style="color:red">5 stars</i></p>	
+ 
+            </div>
+            <div class="top">
+		 <p style="margin-left:10px;color:#800000"><b>MS Dhoni</b></p>
+		 <p style="margin-left:10px;color:#FF5733"><b>Rating:</b>
+		<i style="color:red">4 stars</i></p>	
+            </div>
+            <div class="top">
+		 <p style="margin-left:10px;color:#800000"><b>Yuvraj Singh</b></p>
+		 <p style="margin-left:10px;color:#FF5733"><b>Rating:</b>
+		<i style="color:red">3 stars</i></p>	
+            </div>		
+	</div>
+	<div class="right">
+	    <div class="top">
+		<p style="margin-left:5px">Amazing food; perfect food to your starving stomach .
+		 Fresh, spicy food as requested so it was delivered.
+		 Wonderful experience!.Very pleasant and nice ambience.would like to visit again and again.</p>
+            </div>
+            <div class="top">
+		<p style="margin-left:5px">It is one of the best restaurants. They provide instant service whenever required.
+			amazing experience in affordable prices.</p>
+            </div>
+            <div class="top">
+		<p style="margin-left:5px">One of the best restuarants in affordable rates and numerous varieties to choose from.
+			One of my all time favourite restaurants....is really worth the price...</p>
+            </div>	
+	</div>
+</div>
+	</body>
+	</html>
+{% endblock %}	
